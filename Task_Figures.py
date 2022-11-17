@@ -11,15 +11,15 @@ class Square:
     def __init__(self, a):
         self.a = a
 
-    def get_area_square(self):
+    def get_area(self):
         return self.a ** 2
 
 class Circle:
     def __init__(self, radius):
         self.radius = radius
 
-    def get_area_circle(self):
-        return round(((self.radius**2) * math.pi), 2)
+    def get_area(self):
+        return round((self.radius**2) * math.pi, 2)
         
 ====================================================================================
 
@@ -31,19 +31,14 @@ print(f'площадь прямоуголника r2 равна {r2.get_area()}'
 
 s1 = Square(5)
 s2 = Square(10)
-print(f'площадь квадрата s1 равна {s1.get_area_square()}')
-print(f'площадь квадрата s2 равна {s2.get_area_square()}')
+print(f'площадь квадрата s1 равна {s1.get_area()}')
+print(f'площадь квадрата s2 равна {s2.get_area()}')
 
 c1 = Circle(6)
 c2 = Circle(12)
-print(f'площадь круга c1 равна {c1.get_area_circle()}')
-print(f'площадь круга c1 равна {c2.get_area_circle()}')
+print(f'площадь круга c1 равна {c1.get_area()}')
+print(f'площадь круга c1 равна {c2.get_area()}')
 
 figures = [r1, r2, s1, s2, c1, c2]
 for figure in figures:
-    if isinstance(figure, Square):
-        print(figure.get_area_square())
-    elif isinstance(figure, Circle):
-        print(figure.get_area_circle())
-    else:
-        print(figure.get_area())
+    print(figure.get_area())
