@@ -22,6 +22,7 @@ def quicksort(seq):                                              # сортир�
 
 
 print(f'Отсортированный список:\t{quicksort(array)}')
+array = quicksort(array)
 
 
 def binary_search(array, element):                              # двоичный поиск элемента
