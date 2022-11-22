@@ -1,2 +1,2 @@
-a = 'Hello, Igor!'
+a = 'Это не тот код'
 print(a)
