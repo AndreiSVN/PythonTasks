@@ -6,11 +6,11 @@ while True:
         print('Условие выполнено!')
         break
 
-array = list(map(int, nums.split()))                                  # преобразовываем в список
+array = list(map(int, nums.split()))                                    # преобразовываем в список
 print(f'Преобразованная в список последовательность чисел: {array}')
 
 
-def quicksort(seq):                                                   # сортировка с помощью рандома
+def quicksort(seq):                                              # сортировка с помощью рандома
     if len(seq) <= 1:
         return seq
     else:
@@ -24,7 +24,7 @@ def quicksort(seq):                                                   # сорт
 print(f'Отсортированный список:\t{quicksort(array)}')
 
 
-def binary_search(array, element):                                    # двоичный поиск элемента
+def binary_search(array, element):                              # двоичный поиск элемента
     left = -1
     right = len(array)
     while right > left + 1:
@@ -38,12 +38,11 @@ def binary_search(array, element):                                    # двои
 
 element = int(input('Введите цифру для поиска:\n'))
 
-if element == min(array):                                              # исключительные случаи
+if element == min(array):                                                   # исключительные случаи
     print(f'Индекс элемента: {min(array) - 1}')
-elif element == max(array):
-    print(f'Индекс меньшего элемента: {len(array) - 1}')
 elif element > max(array):
     print('Число больше максимального и не входит в диапазон массива')
 elif element < min(array):
     print('Число меньше минимального и не входит в диапазон массива')
-print(binary_search(array, element-1))
+else:
+    print(f'Индекс элемента меньше введённого: {binary_search(array, element)-1}')
