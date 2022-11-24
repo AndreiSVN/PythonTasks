@@ -1,3 +1,4 @@
+# ====================================      Классы для работы бота "Конвертер валют"        ==============
 import requests
 import json
 from Configuration import keys
