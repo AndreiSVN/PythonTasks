@@ -1,7 +1,7 @@
 # ================================      Телеграм бот "Конвертер валют"      =============================
 
 import telebot
-from Configuration import TOKEN, keys
+from configuration import TOKEN, keys
 from extensions import CurrencyConverter, ConvertException
 
 bot = telebot.TeleBot(TOKEN)
